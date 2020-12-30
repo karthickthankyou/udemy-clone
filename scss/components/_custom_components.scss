@@ -112,3 +112,16 @@ input:checked + .slider:before {
     }
   }
 }
+
+.stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  &::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, $primary-500 var(--percent), $grey-200 var(--percent));
+    // background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
