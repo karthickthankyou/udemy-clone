@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: $white;
+  background-color: $primary-500;
+}

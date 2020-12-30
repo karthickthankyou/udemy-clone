@@ -1,0 +1,17 @@
+@each $name, $value in $shadows {
+  .shadow-#{$name} {
+    box-shadow: #{$value};
+  }
+  .text-shadow-#{$name} {
+    text-shadow: #{$value};
+  }
+  .shadow-inset-#{$name} {
+    box-shadow: inset #{$value};
+  }
+  .hover-shadow-#{$name} {
+    transition: box-shadow $transition-duration;
+    &:hover {
+      box-shadow: #{$value};
+    }
+  }
+}
