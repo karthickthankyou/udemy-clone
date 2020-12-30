@@ -119,9 +119,7 @@ input:checked + .slider:before {
     content: "★★★★★";
     letter-spacing: 3px;
     background: linear-gradient(90deg, $primary-500 var(--percent), $grey-200 var(--percent));
-    // background-clip: text;
+    background-clip: text;
     color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
