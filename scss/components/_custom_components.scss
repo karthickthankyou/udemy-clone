@@ -99,3 +99,16 @@ input:checked + .slider:before {
     }
   }
 }
+
+@each $bp-name, $bp-size in $breakpoints {
+  @each $name, $value in $line-clamps {
+    @media (min-width: $bp-size) {
+      .#{$bp-name}line-clamp-#{$name} {
+        display: -webkit-box;
+        -webkit-line-clamp: #{$value};
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
