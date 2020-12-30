@@ -118,7 +118,7 @@ input:checked + .slider:before {
   &::before {
     content: "★★★★★";
     letter-spacing: 3px;
-    background: linear-gradient(90deg, $primary-500 var(--percent), $grey-200 var(--percent));
+    background: linear-gradient(90deg, $primary-400 var(--percent), $grey-200 var(--percent));
     background-clip: text;
     color: transparent;
   }
