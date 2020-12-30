@@ -35,10 +35,11 @@ $lh-7: 7rem;
 $lh-8: 8rem;
 $lh-9: 9rem;
 
-$text-sizes: "text-xs" $text-xs lh-1, "text-sm" $text-sm lh-1, "text-base" $text-base lh-1_5, "text-lg" $text-lg lh-1_5,
-  "text-xl" $text-xl lh-1_5, "text-2xl" $text-2xl $lh-font-size, "text-3xl" $text-3xl $lh-font-size,
-  "text-4xl" $text-4xl $lh-font-size, "text-5xl" $text-5xl $lh-font-size, "text-6xl" $text-6xl $lh-font-size,
-  "text-7xl" $text-7xl $lh-font-size, "text-8xl" $text-8xl $lh-font-size, "text-9xl" $text-9xl $lh-font-size;
+$text-sizes: "text-xs" $text-xs $lh-1, "text-sm" $text-sm $lh-1, "text-base" $text-base $lh-1_5,
+  "text-lg" $text-lg $lh-1_5, "text-xl" $text-xl $lh-1_5, "text-2xl" $text-2xl $lh-font-size,
+  "text-3xl" $text-3xl $lh-font-size, "text-4xl" $text-4xl $lh-font-size, "text-5xl" $text-5xl $lh-font-size,
+  "text-6xl" $text-6xl $lh-font-size, "text-7xl" $text-7xl $lh-font-size, "text-8xl" $text-8xl $lh-font-size,
+  "text-9xl" $text-9xl $lh-font-size;
 
 $line-heights: (
   "lh-font-size": $lh-font-size,
@@ -95,15 +96,15 @@ $spacing-n: "0" $spacing-n-0, "0_5" $spacing-n-0_5, "1" $spacing-n-1, "1_5" $spa
 $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 $hundred-increments: 0, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
-$primary-900: hsl(245, 58%, 2%);
-$primary-800: hsl(245, 58%, 15%);
-$primary-700: hsl(245, 58%, 30%);
-$primary-600: hsl(245, 58%, 42%);
-$primary-500: hsl(245, 58%, 54%);
-$primary-400: hsl(245, 75%, 65%);
-$primary-300: hsl(245, 75%, 78%);
-$primary-200: hsl(245, 80%, 90%);
-$primary-100: hsl(245, 90%, 98%);
+$primary-900: hsl(0, 80%, 05%);
+$primary-800: hsl(0, 80%, 25%);
+$primary-700: hsl(0, 80%, 40%);
+$primary-600: hsl(0, 80%, 50%);
+$primary-500: hsl(0, 80%, 62%);
+$primary-400: hsl(0, 80%, 70%);
+$primary-300: hsl(0, 80%, 77%);
+$primary-200: hsl(0, 80%, 87%);
+$primary-100: hsl(0, 80%, 97%);
 $secondary-900: hsl(132, 77%, 5%);
 $secondary-800: hsl(132, 77%, 13%);
 $secondary-700: hsl(132, 77%, 22%);
