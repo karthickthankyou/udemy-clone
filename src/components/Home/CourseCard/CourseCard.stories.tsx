@@ -7,12 +7,7 @@ export default {
   component: CourseCard,
 } as Meta;
 
-const Template: Story<ICourseCardProps> = (args) => <div className="d-grid grid-cols-4 gap-1">
-  <CourseCard {...args} />
-  <CourseCard {...args} />
-  <CourseCard {...args} />
-  <CourseCard {...args} />
-</div>;
+const Template: Story<ICourseCardProps> = (args) => <CourseCard {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
