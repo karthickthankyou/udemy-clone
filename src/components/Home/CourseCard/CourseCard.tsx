@@ -1,21 +1,25 @@
 import picture from '../../../assets/sample.jpg'
 import CourseBadge, { ICourseBadgeProps } from '../../common/CourseBadge/CourseBadge'
 export interface ICourseCardProps {
+  title: string,
+  updatedOn: string,
+  courseDuration: number,
+  desc: string,
+  keyPoints: string[],
   rating: number,
   reviewCount: number,
   badgeType: ICourseBadgeProps['badgeType']
 }
 
 
-const CourseCard = ({ rating, reviewCount, badgeType }: ICourseCardProps) => {
-
+const CourseCard = ({ rating, reviewCount, badgeType, title, updatedOn, courseDuration, desc, keyPoints }: ICourseCardProps) => {
   const ratingStyle = { '--rating': rating } as React.CSSProperties;
 
   return (
-    <div>
+    <div className="relative">
       <img src={picture} alt="" className="w-full h-14 object-cover rounded border" />
       <h3 className="text-xl font-weight-600 line-clamp-2">
-        Blender Character Creator v2.0 for Video Games Design
+        {title}
       </h3>
       <p className="text-grey-500 line-clamp-1 text-sm mt-1">
         GameDev.tv Team, Rick Davidson, Grant Abbitt
@@ -33,6 +37,49 @@ const CourseCard = ({ rating, reviewCount, badgeType }: ICourseCardProps) => {
         {
           badgeType && <CourseBadge badgeType={badgeType} />
         }
+      </div>
+      <div className="absolute left-full top-0 z-dropdown bg-white p-4 w-full shadow-lg rounded">
+        <div className="text-xl font-weight-600">
+          {title}
+        </div>
+        <div className="mt-2">
+          {
+            badgeType && <CourseBadge badgeType={badgeType} />
+          }
+          <span className="ml-2 text-sm text-green-600">
+            Updated{" "}
+            <span className="font-weight-600">{updatedOn}</span>
+          </span>
+        </div>
+        <div className="mt-2 text-grey-500 text-sm">
+          <span>
+            {courseDuration} total hours
+            &middot;
+            All Levels
+            &middot;
+            Subtitles
+          </span>
+        </div>
+        <div className="mt-2 text-grey-600">
+          {desc}
+          <ol className="mt-2">
+            {
+              keyPoints.map(point => {
+                return <li className="mt-1">
+                  <span className="text-grey-400">&#8226;</span>
+                  <span className="ml-2">{point}</span></li>
+              })
+            }
+          </ol>
+        </div>
+        <div className='d-flex mt-3'>
+          <button className="bg-primary-500 text-white flex-grow hover-bg-primary-600">
+            Add to cart
+          </button>
+          <button className="rounded-circle text-primary-500 border-primary-500 w-2_5 h-2_5 ml-2 hover-bg-primary-100 d-flex items-center justify-center">
+            <i className="far fa-heart"></i>
+          </button>
+        </div>
       </div>
     </div >
   );
